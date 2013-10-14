@@ -122,7 +122,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="MobileService_doZaBAPI.sequencediagram" />
-    <Content Include="NLog.config" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
   </ItemGroup>
@@ -130,6 +132,12 @@
     <EmbeddedResource Include="MobileService_doZaBAPI.sequencediagram.layout">
       <DependentUpon>MobileService_doZaBAPI.sequencediagram</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Diagnostics\Diagnostics.csproj">
+      <Project>{36bfe37d-7c39-41b1-9119-7c95cd604316}</Project>
+      <Name>Diagnostics</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

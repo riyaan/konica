@@ -14,8 +14,7 @@ namespace ConsoleApplication1
             try
             {
                 //Logger.Instance.Log.Log(NLog.LogLevel.Debug, testing);
-                Logger.Instance.Log.Log(NLog.LogLevel.Debug, "test");
-                Logger.Instance.Log.Trace("Read Schema From File Stream End. @ " + DateTime.Now.ToString());
+                Logger.Instance.Log.Log(NLog.LogLevel.Debug, "test @ " + DateTime.Now.ToString());                
             }
             catch (Exception ex)
             {

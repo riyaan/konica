@@ -10,7 +10,7 @@ namespace Diagnostics.Tests
         [TestMethod]
         public void LogSuccess()
         {
-            Logger.Instance.Log.Trace("Read Schema From File Stream End. @ " + DateTime.Now.ToString());
+            Logger.Instance.Log.Trace("Testing logging");
             Assert.AreEqual(0, 0);
         }
     }
