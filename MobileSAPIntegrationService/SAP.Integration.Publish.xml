@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="http://localhost/Konica" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="IIS" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/MobileSAPIntegrationService.pdb" publishTime="10/07/2013 19:14:29" />
+    <file relUrl="bin/MobileSAPIntegrationService.dll" publishTime="10/07/2013 19:14:29" />
+    <file relUrl="external/SAP.Connector.Rfc.dll" publishTime="10/07/2013 14:14:33" />
+    <file relUrl="Web.config" publishTime="10/07/2013 19:23:13" />
+    <file relUrl="external/SAP.Connector.dll" publishTime="10/07/2013 14:14:33" />
+    <file relUrl="bin/sapnco_utils.dll" publishTime="08/24/2011 03:05:54" />
+    <file relUrl="bin/sapnco.dll" publishTime="08/24/2011 03:05:56" />
+    <file relUrl="external/librfc32.dll" publishTime="10/07/2013 14:14:33" />
+    <file relUrl="MobileService.svc" publishTime="10/07/2013 16:01:15" />
+  </publishProfile>
+</publishData>
