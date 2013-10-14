@@ -16,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagnostics.Tests", "MobileSAPIntegrationService\Diagnostics.Tests\Diagnostics.Tests.csproj", "{31DD89E8-6D5F-4C4C-9ADC-E16A2010485A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "MobileSAPIntegrationService\Diagnostics.Tests\ConsoleApplication1\ConsoleApplication1.csproj", "{1C3CA128-D946-4390-82E6-9B2C3DE0FBC3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7EAAFBB7-1B90-4B75-B5D7-FA15EF966FF1} = {7EAAFBB7-1B90-4B75-B5D7-FA15EF966FF1}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

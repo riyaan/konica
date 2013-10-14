@@ -42,6 +42,8 @@ namespace KonicaMinolta.SAP.Integration
         /// <param name="function"></param>
         public void ProcessSAPFunction(SAPFunction function)
         {
+            Logger.Instance.Log.Trace("ProcessSAPFunction method");
+
             RfcRepository repo = Destination.Repository;
             RfcFunctionMetadata meta = repo.GetFunctionMetadata(function.getName());
             IRfcFunction rfc = meta.CreateFunction();

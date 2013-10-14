@@ -122,9 +122,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="MobileService_doZaBAPI.sequencediagram" />
-    <None Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
   </ItemGroup>
