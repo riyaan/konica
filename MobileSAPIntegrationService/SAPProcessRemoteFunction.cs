@@ -42,34 +42,41 @@ namespace KonicaMinolta.SAP.Integration
         /// <param name="function"></param>
         public void ProcessSAPFunction(SAPFunction function)
         {
-            Logger.Instance.Log.Trace("ProcessSAPFunction method");
-
-            RfcRepository repo = Destination.Repository;
-            RfcFunctionMetadata meta = repo.GetFunctionMetadata(function.getName());
-            IRfcFunction rfc = meta.CreateFunction();
-
-
-            StringBuilder sb = new StringBuilder();
-
-            sb.AppendLine("Request");
-            PrepareInputParameters( function, meta, rfc);
-            foreach (KeyValuePair<string, string> kvp in function.InputParameters)
+            try
             {
-                sb.AppendLine(String.Format("Key: {0}__Value: {1}", kvp.Key, kvp.Value));
+                Logger.Instance.Log.Trace("ProcessSAPFunction method");
+
+                RfcRepository repo = Destination.Repository;
+                RfcFunctionMetadata meta = repo.GetFunctionMetadata(function.getName());
+                IRfcFunction rfc = meta.CreateFunction();
+
+
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendLine("Request");
+                PrepareInputParameters(function, meta, rfc);
+                foreach (KeyValuePair<string, string> kvp in function.InputParameters)
+                {
+                    sb.AppendLine(String.Format("Key: {0}__Value: {1}", kvp.Key, kvp.Value));
+                }
+                Logger.Instance.Log.Trace(sb.ToString());
+
+                PrepareOutputParameters(function, meta, rfc);
+                InvokeSAP(function, rfc);
+                ProcessResults(function, meta, rfc);
+
+                sb.Clear();
+                sb.AppendLine("Response");
+                foreach (string parm in function.OutputParameters)
+                {
+                    sb.AppendLine(parm);
+                }
+                Logger.Instance.Log.Trace(sb.ToString());
             }
-            Logger.Instance.Log.Trace(sb.ToString());
-
-            PrepareOutputParameters(function, meta, rfc);
-            InvokeSAP( function, rfc);
-            ProcessResults(function, meta, rfc);
-
-            sb.Clear();
-            sb.AppendLine("Response");
-            foreach (string parm in function.OutputParameters)
+            catch (Exception ex)
             {
-                sb.AppendLine(parm);
+                LogException(ex, function);
             }
-            Logger.Instance.Log.Trace(sb.ToString());
         }
 
         /// <summary>

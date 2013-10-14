@@ -17,6 +17,7 @@ namespace KonicaMinolta.SAP.Integration
         /// <returns></returns>
         public RfcConfigParameters GetParameters(String destinationName) {
 
+            // 172.100.8.80
             String Host = "172.100.8.33";
             String SystemNumber = "00";
             String User = "Mobile";

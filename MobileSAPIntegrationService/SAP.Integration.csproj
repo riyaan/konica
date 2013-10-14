@@ -123,6 +123,7 @@
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\QAS.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Diagnostics\Diagnostics.csproj">

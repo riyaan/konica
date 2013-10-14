@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ConsoleApplication1.ServiceReference1;
 using Diagnostics;
-using ConsoleApplication1.ServiceReference1;
+using System;
 
 namespace ConsoleApplication1
 {
@@ -13,15 +9,19 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             try
-            {
-                ////Logger.Instance.Log.Log(NLog.LogLevel.Debug, testing);
-                //Logger.Instance.Log.Log(NLog.LogLevel.Debug, "test @ " + DateTime.Now.ToString());                
+            {                
                 TestServiceCall();
+                //TestLogging();
             }
             catch (Exception ex)
             {
-
             }
+        }
+
+        private static void TestLogging()
+        {
+            Logger.Instance.Log.Log(NLog.LogLevel.Debug, "testing");
+            Logger.Instance.Log.Log(NLog.LogLevel.Debug, "test @ " + DateTime.Now.ToString());
         }
 
         private static void TestServiceCall()

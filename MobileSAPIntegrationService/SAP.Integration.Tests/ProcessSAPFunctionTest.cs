@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using KonicaMinolta.SAP.Integration;
-using KonicaMinolta.SAP.Integration.Service;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SAP.Integration.Tests
 {
@@ -11,30 +8,7 @@ namespace SAP.Integration.Tests
         [TestMethod]
         public void Success()
         {
-            GOODSMVT_ITEM[] gmvtItem = new GOODSMVT_ITEM[1];
-            gmvtItem[0] = new GOODSMVT_ITEM()
-            {
-                 ENTRY_QNT = "entQ",
-                  MATERIAL = "mat",
-                   PLANT = "Plant",
-                    STGE_LOC = "stge_log"
-            };
-
-            TIMETICKETS[] tt = new TIMETICKETS[1];
-            tt[0] = new TIMETICKETS()
-            { 
-                ACT_WORK = "aw",
-                 ACT_WORK_2 = "aw2",
-                  CONF_TEXT = "ct", EX_CREATED_BY = "riyaan", EX_CREATED_DATE = DateTime.Now.ToShortDateString(),
-                   EX_CREATED_TIME = DateTime.Now.ToShortTimeString()
-            };
-
-            ServiceReference1.MobileServiceClient client = new ServiceReference1.MobileServiceClient();
-            client.doZaBAPI("orderNumber", "bwclose", "bwopen", "colClose", "colOpen",
-                "riyaan", "c:\temp", DateTime.Now.ToString(), gmvtItem, tt);
-
-
-            //SAPFunction BAPI_GOODSMVT_CREATE_GOODSMVT_ITEM = new SAPFunction();
+           //SAPFunction BAPI_GOODSMVT_CREATE_GOODSMVT_ITEM = new SAPFunction();
 
             //BAPI_GOODSMVT_CREATE_GOODSMVT_ITEM.setName("BAPI_GOODSMVT_CREATE");
             //BAPI_GOODSMVT_CREATE_GOODSMVT_ITEM.AddInputParameter("GOODSMVT_CODE:GM_CODE", "03");//Not harcoded (Example: "DR311K")
