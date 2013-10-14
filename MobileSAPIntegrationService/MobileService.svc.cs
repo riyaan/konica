@@ -104,7 +104,7 @@ namespace KonicaMinolta.SAP.Integration.Service
              ZBAPI.AddInputParameter("DOCUMENTFILES:ORIGINALTYPE", "1"); 
              ZBAPI.AddInputParameter("DOCUMENTFILES:DOCUMENTNUMBER", wsOrderNumber);
              ZBAPI.AddInputParameter("DOCUMENTFILES:WSAPPLICATION", "PDF"); 
-             ZBAPI.AddInputParameter("DOCUMENTFILES:DOCFILE", wsPDFDirectory); 
+             ZBAPI.AddInputParameter("DOCUMENTFILES:DOCFILE", wsPDFDirectory);             
 
             ZBAPI.AddOutputParameter("RETURN:MESSAGE");
             ZBAPI.AddOutputParameter("RETURN:LOG_NO");
