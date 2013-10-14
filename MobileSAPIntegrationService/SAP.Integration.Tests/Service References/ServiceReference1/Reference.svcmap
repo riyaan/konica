@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2201b5db-07d0-4bc1-9d18-73ed513658ae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49578/MobileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MobileService.xsd" MetadataType="Schema" ID="b6627764-71d7-4b0e-ae13-85b7635a1c48" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MobileService1.xsd" MetadataType="Schema" ID="0a514a36-f9e9-44a5-addf-c3667aeb8f13" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MobileService2.xsd" MetadataType="Schema" ID="40036d22-4d3c-4c85-b8b2-fa26882523fb" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MobileService.disco" MetadataType="Disco" ID="027cf5fa-6a20-4e3d-a043-669eb24357fd" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?disco" />
+    <MetadataFile FileName="MobileService.wsdl" MetadataType="Wsdl" ID="5fb6fb5a-7e81-4568-aad1-253781ec5803" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?wsdl" />
+    <MetadataFile FileName="MobileService3.xsd" MetadataType="Schema" ID="eda657df-68f8-4356-9e40-ab5a8842696b" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

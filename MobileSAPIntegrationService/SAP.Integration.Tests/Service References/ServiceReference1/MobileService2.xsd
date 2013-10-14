@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49578/MobileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service" />
+  <xs:element name="SavePDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="docbinaryarray" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePDFResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPDF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DocumentName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPDFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPDFResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doZaBAPI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="wsOrderNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsBWClose" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsBWOpen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsColClose" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsColOpen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsLoginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsPDFDirectory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wsCreatedDate" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service" minOccurs="0" name="wsGoodsMvtItem" nillable="true" type="q1:ArrayOfGOODSMVT_ITEM" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service" minOccurs="0" name="wsTimeTickets" nillable="true" type="q2:ArrayOfTIMETICKETS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="doZaBAPIResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doZaBAPIResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
