@@ -121,14 +121,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="MobileService_doZaBAPI.sequencediagram" />
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MobileService_doZaBAPI.sequencediagram.layout">
-      <DependentUpon>MobileService_doZaBAPI.sequencediagram</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Diagnostics\Diagnostics.csproj">
