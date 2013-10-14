@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAP.Integration", "MobileSAPIntegrationService\SAP.Integration.csproj", "{7EAAFBB7-1B90-4B75-B5D7-FA15EF966FF1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SAP.Integration.Tests", "SAP.Integration.Tests", "{CD9CEF33-AF30-4DBC-B166-2C47E2BB7BAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAP.Integration.Tests", "MobileSAPIntegrationService\SAP.Integration.Tests\SAP.Integration.Tests.csproj", "{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,8 +28,21 @@ Global
 		{7EAAFBB7-1B90-4B75-B5D7-FA15EF966FF1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7EAAFBB7-1B90-4B75-B5D7-FA15EF966FF1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{7EAAFBB7-1B90-4B75-B5D7-FA15EF966FF1}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB0EECC3-625B-4433-BB9A-84BE1FCC0F57} = {CD9CEF33-AF30-4DBC-B166-2C47E2BB7BAF}
 	EndGlobalSection
 EndGlobal
