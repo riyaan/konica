@@ -8,7 +8,6 @@ namespace KonicaMinolta.SAP.Integration
 {
     public class SAPSystemConnect : IDestinationConfiguration
     {
-
         // TODO: Read these values from the config file
         /// <summary>
         /// 
