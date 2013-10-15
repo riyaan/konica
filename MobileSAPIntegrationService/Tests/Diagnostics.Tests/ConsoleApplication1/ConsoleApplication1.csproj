@@ -73,7 +73,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Diagnostics\Diagnostics.csproj">
+    <ProjectReference Include="..\..\..\Common\Diagnostics\Diagnostics.csproj">
       <Project>{36bfe37d-7c39-41b1-9119-7c95cd604316}</Project>
       <Name>Diagnostics</Name>
     </ProjectReference>
