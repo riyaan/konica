@@ -12,19 +12,18 @@
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
-    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
     <ReferencedAssemblies />
     <ReferencedDataContractTypes />
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49578/MobileService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:49578/MobileService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="MobileService.xsd" MetadataType="Schema" ID="f7d1570b-0aa0-4a88-93eb-083ca1378e3d" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd2" />
     <MetadataFile FileName="MobileService1.xsd" MetadataType="Schema" ID="8b083d43-dfaa-4e0b-a5ec-c784dbe64e5d" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd1" />
     <MetadataFile FileName="MobileService2.xsd" MetadataType="Schema" ID="95839768-8667-468a-95e7-b1269b2fb542" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd0" />
-    <MetadataFile FileName="MobileService.disco" MetadataType="Disco" ID="b179fd83-f6ef-4cba-a7cd-64e22d86f859" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?disco" />
     <MetadataFile FileName="MobileService.wsdl" MetadataType="Wsdl" ID="680f69d1-7038-4da5-835d-34c513af673c" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?wsdl" />
     <MetadataFile FileName="MobileService3.xsd" MetadataType="Schema" ID="4b077a04-b497-4bbc-bf0b-cd2e4682a561" SourceId="1" SourceUrl="http://localhost:49578/MobileService.svc?xsd=xsd3" />
   </Metadata>

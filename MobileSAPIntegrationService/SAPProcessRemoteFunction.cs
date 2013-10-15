@@ -42,41 +42,33 @@ namespace KonicaMinolta.SAP.Integration
         /// <param name="function"></param>
         public void ProcessSAPFunction(SAPFunction function)
         {
-            try
+            Logger.Instance.Log.Trace("ProcessSAPFunction method");
+
+            RfcRepository repo = Destination.Repository;
+            RfcFunctionMetadata meta = repo.GetFunctionMetadata(function.getName());
+            IRfcFunction rfc = meta.CreateFunction();
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("Request");
+            PrepareInputParameters(function, meta, rfc);
+            foreach (KeyValuePair<string, string> kvp in function.InputParameters)
             {
-                Logger.Instance.Log.Trace("ProcessSAPFunction method");
-
-                RfcRepository repo = Destination.Repository;
-                RfcFunctionMetadata meta = repo.GetFunctionMetadata(function.getName());
-                IRfcFunction rfc = meta.CreateFunction();
-
-
-                StringBuilder sb = new StringBuilder();
-
-                sb.AppendLine("Request");
-                PrepareInputParameters(function, meta, rfc);
-                foreach (KeyValuePair<string, string> kvp in function.InputParameters)
-                {
-                    sb.AppendLine(String.Format("Key: {0}__Value: {1}", kvp.Key, kvp.Value));
-                }
-                Logger.Instance.Log.Trace(sb.ToString());
-
-                PrepareOutputParameters(function, meta, rfc);
-                InvokeSAP(function, rfc);
-                ProcessResults(function, meta, rfc);
-
-                sb.Clear();
-                sb.AppendLine("Response");
-                foreach (string parm in function.OutputParameters)
-                {
-                    sb.AppendLine(parm);
-                }
-                Logger.Instance.Log.Trace(sb.ToString());
+                sb.AppendLine(String.Format("Key: {0}__Value: {1}", kvp.Key, kvp.Value));
             }
-            catch (Exception ex)
+            Logger.Instance.Log.Trace(sb.ToString());
+
+            PrepareOutputParameters(function, meta, rfc);
+            InvokeSAP(function, rfc);
+            ProcessResults(function, meta, rfc);
+
+            sb.Clear();
+            sb.AppendLine("Response");
+            foreach (string parm in function.OutputParameters)
             {
-                LogException(ex, function);
+                sb.AppendLine(parm);
             }
+            Logger.Instance.Log.Trace(sb.ToString());
         }
 
         /// <summary>

@@ -9,336 +9,446 @@
 //------------------------------------------------------------------------------
 
 namespace ConsoleApplication1.ServiceReference1 {
-    using System.Runtime.Serialization;
-    using System;
+    using System.Data;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GOODSMVT_ITEM", Namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service")]
-    [System.SerializableAttribute()]
-    public partial class GOODSMVT_ITEM : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ENTRY_QNTField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MATERIALField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PLANTField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STGE_LOCField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ENTRY_QNT {
-            get {
-                return this.ENTRY_QNTField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ENTRY_QNTField, value) != true)) {
-                    this.ENTRY_QNTField = value;
-                    this.RaisePropertyChanged("ENTRY_QNT");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MATERIAL {
-            get {
-                return this.MATERIALField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MATERIALField, value) != true)) {
-                    this.MATERIALField = value;
-                    this.RaisePropertyChanged("MATERIAL");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PLANT {
-            get {
-                return this.PLANTField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PLANTField, value) != true)) {
-                    this.PLANTField = value;
-                    this.RaisePropertyChanged("PLANT");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STGE_LOC {
-            get {
-                return this.STGE_LOCField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.STGE_LOCField, value) != true)) {
-                    this.STGE_LOCField = value;
-                    this.RaisePropertyChanged("STGE_LOC");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TIMETICKETS", Namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service")]
-    [System.SerializableAttribute()]
-    public partial class TIMETICKETS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ACT_WORKField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ACT_WORK_2Field;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CONF_TEXTField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EXEC_FIN_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EXEC_FIN_TIMEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EXEC_START_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EXEC_START_TIMEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EX_CREATED_BYField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EX_CREATED_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EX_CREATED_TIMEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FIN_CONFField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OPERATIONField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ACT_WORK {
-            get {
-                return this.ACT_WORKField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ACT_WORKField, value) != true)) {
-                    this.ACT_WORKField = value;
-                    this.RaisePropertyChanged("ACT_WORK");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ACT_WORK_2 {
-            get {
-                return this.ACT_WORK_2Field;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ACT_WORK_2Field, value) != true)) {
-                    this.ACT_WORK_2Field = value;
-                    this.RaisePropertyChanged("ACT_WORK_2");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CONF_TEXT {
-            get {
-                return this.CONF_TEXTField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CONF_TEXTField, value) != true)) {
-                    this.CONF_TEXTField = value;
-                    this.RaisePropertyChanged("CONF_TEXT");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EXEC_FIN_DATE {
-            get {
-                return this.EXEC_FIN_DATEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EXEC_FIN_DATEField, value) != true)) {
-                    this.EXEC_FIN_DATEField = value;
-                    this.RaisePropertyChanged("EXEC_FIN_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EXEC_FIN_TIME {
-            get {
-                return this.EXEC_FIN_TIMEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EXEC_FIN_TIMEField, value) != true)) {
-                    this.EXEC_FIN_TIMEField = value;
-                    this.RaisePropertyChanged("EXEC_FIN_TIME");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EXEC_START_DATE {
-            get {
-                return this.EXEC_START_DATEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EXEC_START_DATEField, value) != true)) {
-                    this.EXEC_START_DATEField = value;
-                    this.RaisePropertyChanged("EXEC_START_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EXEC_START_TIME {
-            get {
-                return this.EXEC_START_TIMEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EXEC_START_TIMEField, value) != true)) {
-                    this.EXEC_START_TIMEField = value;
-                    this.RaisePropertyChanged("EXEC_START_TIME");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EX_CREATED_BY {
-            get {
-                return this.EX_CREATED_BYField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EX_CREATED_BYField, value) != true)) {
-                    this.EX_CREATED_BYField = value;
-                    this.RaisePropertyChanged("EX_CREATED_BY");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EX_CREATED_DATE {
-            get {
-                return this.EX_CREATED_DATEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EX_CREATED_DATEField, value) != true)) {
-                    this.EX_CREATED_DATEField = value;
-                    this.RaisePropertyChanged("EX_CREATED_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EX_CREATED_TIME {
-            get {
-                return this.EX_CREATED_TIMEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EX_CREATED_TIMEField, value) != true)) {
-                    this.EX_CREATED_TIMEField = value;
-                    this.RaisePropertyChanged("EX_CREATED_TIME");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FIN_CONF {
-            get {
-                return this.FIN_CONFField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FIN_CONFField, value) != true)) {
-                    this.FIN_CONFField = value;
-                    this.RaisePropertyChanged("FIN_CONF");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string OPERATION {
-            get {
-                return this.OPERATIONField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OPERATIONField, value) != true)) {
-                    this.OPERATIONField = value;
-                    this.RaisePropertyChanged("OPERATION");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IMobileService")]
     public interface IMobileService {
         
+        // CODEGEN: Parameter 'docbinaryarray' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMobileService/SavePDF", ReplyAction="http://tempuri.org/IMobileService/SavePDFResponse")]
-        bool SavePDF(string docbinaryarray, string docname);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ConsoleApplication1.ServiceReference1.SavePDFResponse SavePDF(ConsoleApplication1.ServiceReference1.SavePDFRequest request);
         
+        // CODEGEN: Parameter 'GetPDFResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMobileService/GetPDF", ReplyAction="http://tempuri.org/IMobileService/GetPDFResponse")]
-        byte[] GetPDF(string DocumentName);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ConsoleApplication1.ServiceReference1.GetPDFResponse GetPDF(ConsoleApplication1.ServiceReference1.GetPDFRequest request);
         
+        // CODEGEN: Parameter 'doZaBAPIResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMobileService/doZaBAPI", ReplyAction="http://tempuri.org/IMobileService/doZaBAPIResponse")]
-        System.Data.DataSet doZaBAPI(string wsOrderNumber, string wsBWClose, string wsBWOpen, string wsColClose, string wsColOpen, string wsLoginUser, string wsPDFDirectory, string wsCreatedDate, ConsoleApplication1.ServiceReference1.GOODSMVT_ITEM[] wsGoodsMvtItem, ConsoleApplication1.ServiceReference1.TIMETICKETS[] wsTimeTickets);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ConsoleApplication1.ServiceReference1.doZaBAPIResponse doZaBAPI(ConsoleApplication1.ServiceReference1.doZaBAPIRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePDF", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class SavePDFRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string docbinaryarray;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string docname;
+        
+        public SavePDFRequest() {
+        }
+        
+        public SavePDFRequest(string docbinaryarray, string docname) {
+            this.docbinaryarray = docbinaryarray;
+            this.docname = docname;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SavePDFResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class SavePDFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public bool SavePDFResult;
+        
+        public SavePDFResponse() {
+        }
+        
+        public SavePDFResponse(bool SavePDFResult) {
+            this.SavePDFResult = SavePDFResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPDF", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetPDFRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DocumentName;
+        
+        public GetPDFRequest() {
+        }
+        
+        public GetPDFRequest(string DocumentName) {
+            this.DocumentName = DocumentName;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetPDFResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetPDFResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", IsNullable=true)]
+        public byte[] GetPDFResult;
+        
+        public GetPDFResponse() {
+        }
+        
+        public GetPDFResponse(byte[] GetPDFResult) {
+            this.GetPDFResult = GetPDFResult;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18060")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service")]
+    public partial class GOODSMVT_ITEM : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string eNTRY_QNTField;
+        
+        private string mATERIALField;
+        
+        private string pLANTField;
+        
+        private string sTGE_LOCField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string ENTRY_QNT {
+            get {
+                return this.eNTRY_QNTField;
+            }
+            set {
+                this.eNTRY_QNTField = value;
+                this.RaisePropertyChanged("ENTRY_QNT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string MATERIAL {
+            get {
+                return this.mATERIALField;
+            }
+            set {
+                this.mATERIALField = value;
+                this.RaisePropertyChanged("MATERIAL");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string PLANT {
+            get {
+                return this.pLANTField;
+            }
+            set {
+                this.pLANTField = value;
+                this.RaisePropertyChanged("PLANT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string STGE_LOC {
+            get {
+                return this.sTGE_LOCField;
+            }
+            set {
+                this.sTGE_LOCField = value;
+                this.RaisePropertyChanged("STGE_LOC");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.18060")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service")]
+    public partial class TIMETICKETS : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string aCT_WORKField;
+        
+        private string aCT_WORK_2Field;
+        
+        private string cONF_TEXTField;
+        
+        private string eXEC_FIN_DATEField;
+        
+        private string eXEC_FIN_TIMEField;
+        
+        private string eXEC_START_DATEField;
+        
+        private string eXEC_START_TIMEField;
+        
+        private string eX_CREATED_BYField;
+        
+        private string eX_CREATED_DATEField;
+        
+        private string eX_CREATED_TIMEField;
+        
+        private string fIN_CONFField;
+        
+        private string oPERATIONField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string ACT_WORK {
+            get {
+                return this.aCT_WORKField;
+            }
+            set {
+                this.aCT_WORKField = value;
+                this.RaisePropertyChanged("ACT_WORK");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string ACT_WORK_2 {
+            get {
+                return this.aCT_WORK_2Field;
+            }
+            set {
+                this.aCT_WORK_2Field = value;
+                this.RaisePropertyChanged("ACT_WORK_2");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string CONF_TEXT {
+            get {
+                return this.cONF_TEXTField;
+            }
+            set {
+                this.cONF_TEXTField = value;
+                this.RaisePropertyChanged("CONF_TEXT");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string EXEC_FIN_DATE {
+            get {
+                return this.eXEC_FIN_DATEField;
+            }
+            set {
+                this.eXEC_FIN_DATEField = value;
+                this.RaisePropertyChanged("EXEC_FIN_DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=4)]
+        public string EXEC_FIN_TIME {
+            get {
+                return this.eXEC_FIN_TIMEField;
+            }
+            set {
+                this.eXEC_FIN_TIMEField = value;
+                this.RaisePropertyChanged("EXEC_FIN_TIME");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=5)]
+        public string EXEC_START_DATE {
+            get {
+                return this.eXEC_START_DATEField;
+            }
+            set {
+                this.eXEC_START_DATEField = value;
+                this.RaisePropertyChanged("EXEC_START_DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=6)]
+        public string EXEC_START_TIME {
+            get {
+                return this.eXEC_START_TIMEField;
+            }
+            set {
+                this.eXEC_START_TIMEField = value;
+                this.RaisePropertyChanged("EXEC_START_TIME");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=7)]
+        public string EX_CREATED_BY {
+            get {
+                return this.eX_CREATED_BYField;
+            }
+            set {
+                this.eX_CREATED_BYField = value;
+                this.RaisePropertyChanged("EX_CREATED_BY");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=8)]
+        public string EX_CREATED_DATE {
+            get {
+                return this.eX_CREATED_DATEField;
+            }
+            set {
+                this.eX_CREATED_DATEField = value;
+                this.RaisePropertyChanged("EX_CREATED_DATE");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=9)]
+        public string EX_CREATED_TIME {
+            get {
+                return this.eX_CREATED_TIMEField;
+            }
+            set {
+                this.eX_CREATED_TIMEField = value;
+                this.RaisePropertyChanged("EX_CREATED_TIME");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=10)]
+        public string FIN_CONF {
+            get {
+                return this.fIN_CONFField;
+            }
+            set {
+                this.fIN_CONFField = value;
+                this.RaisePropertyChanged("FIN_CONF");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=11)]
+        public string OPERATION {
+            get {
+                return this.oPERATIONField;
+            }
+            set {
+                this.oPERATIONField = value;
+                this.RaisePropertyChanged("OPERATION");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="doZaBAPI", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class doZaBAPIRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsOrderNumber;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsBWClose;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsBWOpen;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsColClose;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsColOpen;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsLoginUser;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsPDFDirectory;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wsCreatedDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=8)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service")]
+        public ConsoleApplication1.ServiceReference1.GOODSMVT_ITEM[] wsGoodsMvtItem;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=9)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/KonicaMinolta.SAP.Integration.Service")]
+        public ConsoleApplication1.ServiceReference1.TIMETICKETS[] wsTimeTickets;
+        
+        public doZaBAPIRequest() {
+        }
+        
+        public doZaBAPIRequest(string wsOrderNumber, string wsBWClose, string wsBWOpen, string wsColClose, string wsColOpen, string wsLoginUser, string wsPDFDirectory, string wsCreatedDate, ConsoleApplication1.ServiceReference1.GOODSMVT_ITEM[] wsGoodsMvtItem, ConsoleApplication1.ServiceReference1.TIMETICKETS[] wsTimeTickets) {
+            this.wsOrderNumber = wsOrderNumber;
+            this.wsBWClose = wsBWClose;
+            this.wsBWOpen = wsBWOpen;
+            this.wsColClose = wsColClose;
+            this.wsColOpen = wsColOpen;
+            this.wsLoginUser = wsLoginUser;
+            this.wsPDFDirectory = wsPDFDirectory;
+            this.wsCreatedDate = wsCreatedDate;
+            this.wsGoodsMvtItem = wsGoodsMvtItem;
+            this.wsTimeTickets = wsTimeTickets;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="doZaBAPIResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class doZaBAPIResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Data.DataSet doZaBAPIResult;
+        
+        public doZaBAPIResponse() {
+        }
+        
+        public doZaBAPIResponse(System.Data.DataSet doZaBAPIResult) {
+            this.doZaBAPIResult = doZaBAPIResult;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -368,16 +478,50 @@ namespace ConsoleApplication1.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsoleApplication1.ServiceReference1.SavePDFResponse ConsoleApplication1.ServiceReference1.IMobileService.SavePDF(ConsoleApplication1.ServiceReference1.SavePDFRequest request) {
+            return base.Channel.SavePDF(request);
+        }
+        
         public bool SavePDF(string docbinaryarray, string docname) {
-            return base.Channel.SavePDF(docbinaryarray, docname);
+            ConsoleApplication1.ServiceReference1.SavePDFRequest inValue = new ConsoleApplication1.ServiceReference1.SavePDFRequest();
+            inValue.docbinaryarray = docbinaryarray;
+            inValue.docname = docname;
+            ConsoleApplication1.ServiceReference1.SavePDFResponse retVal = ((ConsoleApplication1.ServiceReference1.IMobileService)(this)).SavePDF(inValue);
+            return retVal.SavePDFResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsoleApplication1.ServiceReference1.GetPDFResponse ConsoleApplication1.ServiceReference1.IMobileService.GetPDF(ConsoleApplication1.ServiceReference1.GetPDFRequest request) {
+            return base.Channel.GetPDF(request);
         }
         
         public byte[] GetPDF(string DocumentName) {
-            return base.Channel.GetPDF(DocumentName);
+            ConsoleApplication1.ServiceReference1.GetPDFRequest inValue = new ConsoleApplication1.ServiceReference1.GetPDFRequest();
+            inValue.DocumentName = DocumentName;
+            ConsoleApplication1.ServiceReference1.GetPDFResponse retVal = ((ConsoleApplication1.ServiceReference1.IMobileService)(this)).GetPDF(inValue);
+            return retVal.GetPDFResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ConsoleApplication1.ServiceReference1.doZaBAPIResponse ConsoleApplication1.ServiceReference1.IMobileService.doZaBAPI(ConsoleApplication1.ServiceReference1.doZaBAPIRequest request) {
+            return base.Channel.doZaBAPI(request);
         }
         
         public System.Data.DataSet doZaBAPI(string wsOrderNumber, string wsBWClose, string wsBWOpen, string wsColClose, string wsColOpen, string wsLoginUser, string wsPDFDirectory, string wsCreatedDate, ConsoleApplication1.ServiceReference1.GOODSMVT_ITEM[] wsGoodsMvtItem, ConsoleApplication1.ServiceReference1.TIMETICKETS[] wsTimeTickets) {
-            return base.Channel.doZaBAPI(wsOrderNumber, wsBWClose, wsBWOpen, wsColClose, wsColOpen, wsLoginUser, wsPDFDirectory, wsCreatedDate, wsGoodsMvtItem, wsTimeTickets);
+            ConsoleApplication1.ServiceReference1.doZaBAPIRequest inValue = new ConsoleApplication1.ServiceReference1.doZaBAPIRequest();
+            inValue.wsOrderNumber = wsOrderNumber;
+            inValue.wsBWClose = wsBWClose;
+            inValue.wsBWOpen = wsBWOpen;
+            inValue.wsColClose = wsColClose;
+            inValue.wsColOpen = wsColOpen;
+            inValue.wsLoginUser = wsLoginUser;
+            inValue.wsPDFDirectory = wsPDFDirectory;
+            inValue.wsCreatedDate = wsCreatedDate;
+            inValue.wsGoodsMvtItem = wsGoodsMvtItem;
+            inValue.wsTimeTickets = wsTimeTickets;
+            ConsoleApplication1.ServiceReference1.doZaBAPIResponse retVal = ((ConsoleApplication1.ServiceReference1.IMobileService)(this)).doZaBAPI(inValue);
+            return retVal.doZaBAPIResult;
         }
     }
 }
