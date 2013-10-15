@@ -50,25 +50,11 @@ namespace KonicaMinolta.SAP.Integration
 
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Request");
             PrepareInputParameters(function, meta, rfc);
-            foreach (KeyValuePair<string, string> kvp in function.InputParameters)
-            {
-                sb.AppendLine(String.Format("Key: {0}__Value: {1}", kvp.Key, kvp.Value));
-            }
-            Logger.Instance.Log.Trace(sb.ToString());
 
             PrepareOutputParameters(function, meta, rfc);
             InvokeSAP(function, rfc);
             ProcessResults(function, meta, rfc);
-
-            sb.Clear();
-            sb.AppendLine("Response");
-            foreach (string parm in function.OutputParameters)
-            {
-                sb.AppendLine(parm);
-            }
-            Logger.Instance.Log.Trace(sb.ToString());
         }
 
         /// <summary>

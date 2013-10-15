@@ -21,6 +21,8 @@ namespace Diagnostics
         {
             Logger.Instance.Log.Trace("BeforeSendRequest Start");
 
+            System.Diagnostics.Trace.WriteLine("Custom message to trace file.");
+
             MessageBuffer buffer = request.CreateBufferedCopy(Int32.MaxValue);
             Message message = buffer.CreateMessage();
 
@@ -36,6 +38,8 @@ namespace Diagnostics
         public object AfterReceiveRequest(ref Message request, IClientChannel channel, InstanceContext instanceContext)
         {
             Logger.Instance.Log.Trace("After receive request Start");
+
+            System.Diagnostics.Trace.WriteLine("Custom message to trace file.");
 
             MessageBuffer buffer = request.CreateBufferedCopy(Int32.MaxValue);
             Message message = buffer.CreateMessage();
