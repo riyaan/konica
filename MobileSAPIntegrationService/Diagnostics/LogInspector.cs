@@ -23,14 +23,8 @@ namespace Diagnostics
 
             MessageBuffer buffer = request.CreateBufferedCopy(Int32.MaxValue);
             Message message = buffer.CreateMessage();
-            ////XmlTextWriter xtw = new XmlTextWriter(Console.Out);
-            //XmlTextWriter xtw = new XmlTextWriter(@"C:\Work\3Fifteen\Konica\MobileSAPIntegrationService\Logs\log.log", null);
-            //xtw.Formatting = Formatting.Indented;
-            //message.WriteMessage(xtw);
-            //xtw.Flush();
-            //xtw.Close();
 
-            Logger.Instance.Log.Debug<Message>(message);
+            LogMessage(message);
 
             request = buffer.CreateMessage();
 
@@ -44,15 +38,9 @@ namespace Diagnostics
             Logger.Instance.Log.Trace("After receive request Start");
 
             MessageBuffer buffer = request.CreateBufferedCopy(Int32.MaxValue);
-            Message message = buffer.CreateMessage();            
+            Message message = buffer.CreateMessage();
 
-            StringBuilder sb = new StringBuilder();
-            using (System.Xml.XmlWriter xw = System.Xml.XmlWriter.Create(sb))
-            {
-                message.WriteMessage(xw);
-                xw.Close();
-            }
-            Logger.Instance.Log.Trace("Message Received:\n{0}", sb.ToString());
+            LogMessage(message);
 
             request = buffer.CreateMessage();
 
@@ -64,6 +52,17 @@ namespace Diagnostics
         public void BeforeSendReply(ref Message reply, object correlationState)
         {
             Logger.Instance.Log.Trace("Before send reply");
+        }
+
+        private void LogMessage(Message message)
+        {
+            StringBuilder sb = new StringBuilder();
+            using (System.Xml.XmlWriter xw = System.Xml.XmlWriter.Create(sb))
+            {
+                message.WriteMessage(xw);
+                xw.Close();
+            }
+            Logger.Instance.Log.Trace("Message :\n{0}", sb.ToString());
         }
     }
 }
