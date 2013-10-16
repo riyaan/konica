@@ -6,7 +6,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <NameOfLastUsedPublishProfile>QAS</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>DEV</NameOfLastUsedPublishProfile>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
