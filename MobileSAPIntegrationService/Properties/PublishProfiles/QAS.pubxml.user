@@ -7,4 +7,60 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Debug/libicudecnumber.dll">
+      <publishTime>10/14/2013 10:12:34</publishTime>
+    </File>
+    <File Include="bin/Diagnostics.dll">
+      <publishTime>10/15/2013 16:34:14</publishTime>
+    </File>
+    <File Include="bin/Diagnostics.pdb">
+      <publishTime>10/15/2013 16:34:14</publishTime>
+    </File>
+    <File Include="bin/MobileSAPIntegrationService.dll">
+      <publishTime>10/15/2013 16:34:15</publishTime>
+    </File>
+    <File Include="bin/MobileSAPIntegrationService.pdb">
+      <publishTime>10/15/2013 16:34:15</publishTime>
+    </File>
+    <File Include="bin/NLog.config">
+      <publishTime>10/14/2013 12:19:10</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>10/14/2013 11:39:39</publishTime>
+    </File>
+    <File Include="bin/Release/libicudecnumber.dll">
+      <publishTime>10/14/2013 10:12:34</publishTime>
+    </File>
+    <File Include="bin/SAP.Connector.dll">
+      <publishTime>10/07/2013 15:14:32</publishTime>
+    </File>
+    <File Include="bin/SAP.Connector.Rfc.dll">
+      <publishTime>10/07/2013 15:14:32</publishTime>
+    </File>
+    <File Include="bin/sapnco.dll">
+      <publishTime>10/14/2013 10:12:34</publishTime>
+    </File>
+    <File Include="bin/sapnco_utils.dll">
+      <publishTime>10/14/2013 10:12:34</publishTime>
+    </File>
+    <File Include="external/SAP.Connector.dll">
+      <publishTime>10/07/2013 15:14:32</publishTime>
+    </File>
+    <File Include="external/SAP.Connector.Rfc.dll">
+      <publishTime>10/07/2013 15:14:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/08/2013 12:26:00</publishTime>
+    </File>
+    <File Include="MobileService.svc">
+      <publishTime>10/07/2013 17:01:16</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/14/2013 11:39:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/15/2013 16:34:36</publishTime>
+    </File>
+  </ItemGroup>
 </Project>
