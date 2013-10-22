@@ -124,6 +124,7 @@
     <None Include="Properties\PublishProfiles\DEV.pubxml" />
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\PROD.pubxml" />
     <None Include="Properties\PublishProfiles\QAS.pubxml" />
     <None Include="Web.DEV.config">
       <DependentUpon>Web.config</DependentUpon>
