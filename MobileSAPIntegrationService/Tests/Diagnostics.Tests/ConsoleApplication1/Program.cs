@@ -9,13 +9,25 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             try
-            {                
-                TestServiceCall();
+            {
+                TestMisc();
+                //TestServiceCall();
                 //TestLogging();
             }
             catch (Exception ex)
             {
             }
+        }
+
+        private static void TestMisc()
+        {
+            string p = "{0, " + 18 + "}";
+            string q = String.Format("{0, " + 18 + "}", "1391-1016-01");
+
+            string[] paramDetail = "GOODSMVT_ITEM[0]:MATERIAL".Split(':');
+
+            string r = "{0, " + 2 + "}";
+            string s = String.Format(r, "1391-1016-01");
         }
 
         private static void TestLogging()

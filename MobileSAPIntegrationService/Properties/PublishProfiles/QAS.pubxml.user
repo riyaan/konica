@@ -12,16 +12,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/14/2013 10:12:34</publishTime>
     </File>
     <File Include="bin/Diagnostics.dll">
-      <publishTime>10/15/2013 16:34:14</publishTime>
+      <publishTime>10/22/2013 09:48:48</publishTime>
     </File>
     <File Include="bin/Diagnostics.pdb">
-      <publishTime>10/15/2013 16:34:14</publishTime>
+      <publishTime>10/22/2013 09:48:48</publishTime>
     </File>
     <File Include="bin/MobileSAPIntegrationService.dll">
-      <publishTime>10/15/2013 16:34:15</publishTime>
+      <publishTime>10/22/2013 09:48:48</publishTime>
     </File>
     <File Include="bin/MobileSAPIntegrationService.pdb">
-      <publishTime>10/15/2013 16:34:15</publishTime>
+      <publishTime>10/22/2013 09:48:48</publishTime>
     </File>
     <File Include="bin/NLog.config">
       <publishTime>10/14/2013 12:19:10</publishTime>
@@ -60,7 +60,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/14/2013 11:39:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/15/2013 16:34:36</publishTime>
+      <publishTime>10/22/2013 09:50:37</publishTime>
     </File>
   </ItemGroup>
 </Project>

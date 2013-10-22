@@ -44,17 +44,39 @@ namespace KonicaMinolta.SAP.Integration
         {
             Logger.Instance.Log.Trace("ProcessSAPFunction method");
 
+            //LogParameters(function.InputParameters, "Before preparing input.");
+
             RfcRepository repo = Destination.Repository;
             RfcFunctionMetadata meta = repo.GetFunctionMetadata(function.getName());
-            IRfcFunction rfc = meta.CreateFunction();
-
-            StringBuilder sb = new StringBuilder();
+            IRfcFunction rfc = meta.CreateFunction();            
 
             PrepareInputParameters(function, meta, rfc);
+
+            //LogParameters(function.InputParameters, "After input has been prepared.");
 
             PrepareOutputParameters(function, meta, rfc);
             InvokeSAP(function, rfc);
             ProcessResults(function, meta, rfc);
+        }
+
+        /// <summary>
+        /// Logs the parameters passed on to the SAP function call.
+        /// </summary>
+        /// <param name="dictionary">The dictionary.</param>
+        /// <param name="message">The message.</param>
+        private void LogParameters(IDictionary<string, string> dictionary, string message)
+        {
+            //Logger.Instance.Log.Trace(message);
+
+            //StringBuilder sb = new StringBuilder();
+            //foreach (KeyValuePair<string, string> kvp in dictionary)
+            //{
+            //    sb.AppendLine(String.Format("Key: {0}", kvp.Key));
+            //    sb.AppendLine(String.Format("Value: {0}", kvp.Value));
+            //}
+
+            //Logger.Instance.Log.Trace(sb.ToString());
+            //sb.Clear();
         }
 
         /// <summary>
@@ -357,7 +379,12 @@ namespace KonicaMinolta.SAP.Integration
                             table.CurrentIndex = tableRowIndex;
 
                             //rfc.Invoke(this.Destination);
-                            table.SetValue(paramName, String.Format("{0, " + table.GetElementMetadata(paramName).NucLength + "}", paramValue));
+
+                            RfcElementMetadata em = table.GetElementMetadata(paramName);
+
+                            string s = String.Format("{0, " + table.GetElementMetadata(paramName).NucLength + "}", paramValue);
+
+                            table.SetValue(paramName, s.Trim());
                             function.Length.Add(paramName + ":" + secondLevelStructure, table.GetElementMetadata(paramName).NucLength);
                         }
                     }
