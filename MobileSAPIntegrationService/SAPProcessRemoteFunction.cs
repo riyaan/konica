@@ -86,7 +86,6 @@ namespace KonicaMinolta.SAP.Integration
         /// <param name="function"></param>
         private void LogException(Exception ex, SAPFunction function)
         {
-            /// todo: add logic here to log to DB or file.
             Logger.Instance.Log.LogException(NLog.LogLevel.Error, String.Format("Function Name: {0}", function.getName()), ex);
         }
 
