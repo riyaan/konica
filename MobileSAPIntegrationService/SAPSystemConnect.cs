@@ -3,36 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SAP.Middleware.Connector;
+using Common.Configuration;
 
 namespace KonicaMinolta.SAP.Integration
 {
     public class SAPSystemConnect : IDestinationConfiguration
     {
-        // TODO: Read these values from the config file
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="destinationName"></param>
-        /// <returns></returns>
         public RfcConfigParameters GetParameters(String destinationName) {
 
-            // 172.100.8.80
-            String Host = "172.100.8.33";
-            String SystemNumber = "00";
-            String User = "Mobile";
-            String Password = "mobile123";
-            String Client = "100";
-            String Language = "EN";
+            Manager manager = new Manager();
+            SapConnection sapConnection = manager.GetSapConfigurationInformation();            
 
             RfcConfigParameters parms = new RfcConfigParameters();
-            parms.Add(RfcConfigParameters.AppServerHost, Host);
-            parms.Add(RfcConfigParameters.SystemNumber, SystemNumber);
-            parms.Add(RfcConfigParameters.User, User);
-            parms.Add(RfcConfigParameters.Password, Password);
-            parms.Add(RfcConfigParameters.Client, Client);
-            parms.Add(RfcConfigParameters.Language, Language);
-            parms.Add(RfcConfigParameters.PoolSize, "125");
-            parms.Add(RfcConfigParameters.MaxPoolSize, "250");
+            parms.Add(RfcConfigParameters.AppServerHost, sapConnection.Host);
+            parms.Add(RfcConfigParameters.SystemNumber, sapConnection.SystemNumber);
+            parms.Add(RfcConfigParameters.User, sapConnection.User);
+            parms.Add(RfcConfigParameters.Password, sapConnection.Password);
+            parms.Add(RfcConfigParameters.Client, sapConnection.Client);
+            parms.Add(RfcConfigParameters.Language, sapConnection.Language);
+            parms.Add(RfcConfigParameters.PoolSize, sapConnection.PoolSize);
+            parms.Add(RfcConfigParameters.MaxPoolSize, sapConnection.MaxPoolSize);
             parms.Add(RfcConfigParameters.Name, destinationName);
 
             return parms;

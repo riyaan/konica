@@ -137,6 +137,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Common\Configuration\Configuration.csproj">
+      <Project>{f286eab6-c331-4403-a042-504a72814be8}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="Common\Diagnostics\Diagnostics.csproj">
       <Project>{36bfe37d-7c39-41b1-9119-7c95cd604316}</Project>
       <Name>Diagnostics</Name>
