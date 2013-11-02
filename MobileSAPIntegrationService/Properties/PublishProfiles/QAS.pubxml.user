@@ -9,25 +9,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Configuration.dll">
-      <publishTime>10/30/2013 14:46:09</publishTime>
+      <publishTime>10/31/2013 12:02:24</publishTime>
     </File>
     <File Include="bin/Configuration.pdb">
-      <publishTime>10/30/2013 14:46:09</publishTime>
+      <publishTime>10/31/2013 12:02:23</publishTime>
     </File>
     <File Include="bin/Debug/libicudecnumber.dll">
       <publishTime>10/14/2013 10:12:34</publishTime>
     </File>
     <File Include="bin/Diagnostics.dll">
-      <publishTime>10/30/2013 14:46:09</publishTime>
+      <publishTime>10/31/2013 12:02:24</publishTime>
     </File>
     <File Include="bin/Diagnostics.pdb">
-      <publishTime>10/30/2013 14:46:09</publishTime>
+      <publishTime>10/31/2013 12:02:23</publishTime>
     </File>
     <File Include="bin/MobileSAPIntegrationService.dll">
-      <publishTime>10/30/2013 14:46:11</publishTime>
+      <publishTime>10/31/2013 12:02:25</publishTime>
     </File>
     <File Include="bin/MobileSAPIntegrationService.pdb">
-      <publishTime>10/30/2013 14:46:11</publishTime>
+      <publishTime>10/31/2013 12:02:25</publishTime>
     </File>
     <File Include="bin/NLog.config">
       <publishTime>10/14/2013 12:19:10</publishTime>
@@ -66,7 +66,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/14/2013 11:39:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/30/2013 14:50:44</publishTime>
+      <publishTime>10/31/2013 12:02:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

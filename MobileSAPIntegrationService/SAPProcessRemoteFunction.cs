@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
-using System.Text;
 using SAP.Middleware.Connector;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.IO;
-using System.Threading;
 using System.Data;
-using KonicaMinolta.SAP.Integration.Service;
 using Diagnostics;
+using Common.Configuration;
 
 
 namespace KonicaMinolta.SAP.Integration
@@ -33,7 +27,11 @@ namespace KonicaMinolta.SAP.Integration
         public SAPProcessRemoteFunction()
         {
             SAPSystemConnect sapCfg = new SAPSystemConnect();
-            this.Destination = RfcDestinationManager.GetDestination(sapCfg.GetParameters("DEV"));
+
+            //this.Destination = RfcDestinationManager.GetDestination(sapCfg.GetParameters("DEV"));
+            Manager manager = new Common.Configuration.Manager();
+            SapEnvironment sapEnvironment = manager.GetSapEnvironmentName();
+            this.Destination = RfcDestinationManager.GetDestination(sapCfg.GetParameters(sapEnvironment.EnvironmentName));
         }
 
         /// <summary>

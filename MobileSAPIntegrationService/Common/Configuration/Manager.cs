@@ -14,6 +14,11 @@ namespace Common.Configuration
         public string MaxPoolSize { get; set; }
     }
 
+    public class SapEnvironment
+    {
+        public string EnvironmentName { get; set; }
+    }
+
     public class Manager
     {
         public SapConnection GetSapConfigurationInformation()
@@ -26,10 +31,18 @@ namespace Common.Configuration
             sapConnection.Password = ConfigurationManager.AppSettings["Password"];
             sapConnection.Client = ConfigurationManager.AppSettings["Client"];
             sapConnection.Language = ConfigurationManager.AppSettings["Language"];
-            sapConnection.Language = ConfigurationManager.AppSettings["PoolSize"];
-            sapConnection.Language = ConfigurationManager.AppSettings["MaxPoolSize"];
+            sapConnection.PoolSize = ConfigurationManager.AppSettings["PoolSize"];
+            sapConnection.MaxPoolSize = ConfigurationManager.AppSettings["MaxPoolSize"];
 
             return sapConnection;
+        }
+
+        public SapEnvironment GetSapEnvironmentName()
+        {
+            SapEnvironment sapEnvironment = new SapEnvironment();
+            sapEnvironment.EnvironmentName = ConfigurationManager.AppSettings["EnvironmentName"];
+
+            return sapEnvironment;
         }
     }
 }
