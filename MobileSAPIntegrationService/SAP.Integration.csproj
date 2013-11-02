@@ -188,7 +188,7 @@
           <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>49578</DevelopmentServerPort>
           <DevelopmentServerVPath>/xxx2</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49578/</IISUrl>
+          <IISUrl>http://localhost/Konica</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
