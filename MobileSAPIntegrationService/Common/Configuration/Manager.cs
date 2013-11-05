@@ -19,6 +19,9 @@ namespace Common.Configuration
         public string EnvironmentName { get; set; }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class Manager
     {
         public SapConnection GetSapConfigurationInformation()
